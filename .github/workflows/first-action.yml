@@ -1,0 +1,13 @@
+name: Frist Github Action
+
+on: [push] # Trigger when I push code
+
+jobs:
+  hello-world:
+      runs-on: ubuntu-latest # Runs on a Linux virtual machine
+      steps:
+        - name: Checkout code
+          uses: actions/checkout@v3
+
+        - name: Print a message
+          run: echo " Hello, Github Actions!"
