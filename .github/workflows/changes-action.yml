@@ -1,0 +1,17 @@
+name: File Change Detection
+
+on:
+    push:
+        paths:
+            - '**/*'
+
+jobs:
+    file-change-detection:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v2
+
+            - name: Notify file change
+              run: echo "A file change has been detected."
